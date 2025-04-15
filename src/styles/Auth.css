@@ -1,0 +1,79 @@
+/* src/styles/Auth.css */
+.auth-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-container:hover {
+  transform: scale(1.02);
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.auth-container input:focus {
+  border-color: #c4268f;
+}
+
+.auth-container button {
+  padding: 0.8rem;
+  background-color:#c4268f;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #ca5da0;
+}
+
+.auth-container p {
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.auth-container p:hover {
+  color: #0056b3;
+}
+
+.auth-container .forgot-password {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.auth-container .forgot-password:hover {
+  color: #0056b3;
+}

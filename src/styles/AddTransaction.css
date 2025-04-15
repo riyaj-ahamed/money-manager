@@ -1,0 +1,15 @@
+.add-transaction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .add-transaction input,
+  .add-transaction select,
+  .add-transaction button {
+    flex: 1 1 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  

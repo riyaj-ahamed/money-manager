@@ -1,0 +1,45 @@
+.transaction-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f6f8;
+  }
+  
+  .transaction-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .transaction-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .transaction-form input,
+  .transaction-form select,
+  .transaction-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .transaction-form button {
+    width: 100%;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .transaction-form button:hover {
+    background: #1565c0;
+  }
+  
