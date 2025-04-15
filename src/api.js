@@ -1,4 +1,13 @@
 const API_URL = process.env.REACT_APP_API_URL;
+// Example: api.js
+import axios from 'axios';
+
+export const loginUser = async (credentials) => {
+  const response = await axios.post('/api/login', credentials);
+  return response.data;
+};
+
+// Other exports if any
 
 export const getTransactions = async () => {
   const token = localStorage.getItem('token');
