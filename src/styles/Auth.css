@@ -17,7 +17,7 @@
 .auth-container h2 {
   margin-bottom: 1.5rem;
   color: #333;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
 }
 
@@ -42,7 +42,7 @@
 
 .auth-container button {
   padding: 0.8rem;
-  background-color:#c4268f;
+  background-color: #c4268f;
   color: white;
   border: none;
   font-weight: bold;

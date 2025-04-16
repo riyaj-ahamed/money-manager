@@ -1,4 +1,4 @@
-const Transaction = require('../models/Transaction');
+const Transaction = require("../models/Transaction");
 
 // Add a new transaction
 const addTransaction = async (req, res) => {
@@ -18,7 +18,12 @@ const addTransaction = async (req, res) => {
     });
 
     await newTransaction.save();
-    res.status(201).json({ message: "Transaction added successfully", transaction: newTransaction });
+    res
+      .status(201)
+      .json({
+        message: "Transaction added successfully",
+        transaction: newTransaction,
+      });
   } catch (err) {
     console.error("Add transaction error:", err);
     res.status(500).json({ error: "Failed to add transaction" });
@@ -28,7 +33,9 @@ const addTransaction = async (req, res) => {
 // Get all transactions for the logged-in user
 const getTransactions = async (req, res) => {
   try {
-    const transactions = await Transaction.find({ user: req.user.id }).sort({ createdAt: -1 });
+    const transactions = await Transaction.find({ user: req.user.id }).sort({
+      createdAt: -1,
+    });
     res.status(200).json(transactions);
   } catch (err) {
     console.error("Get transactions error:", err);

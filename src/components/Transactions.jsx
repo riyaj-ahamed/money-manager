@@ -33,7 +33,12 @@ const Transactions = () => {
     try {
       await addTransaction(formData);
       fetchTransactions(); // refresh
-      setFormData({ amount: "", type: "expense", category: "", description: "" });
+      setFormData({
+        amount: "",
+        type: "expense",
+        category: "",
+        description: "",
+      });
     } catch (err) {
       console.error("Add failed", err);
     }
@@ -52,13 +57,31 @@ const Transactions = () => {
     <div className="transactions">
       <h2>Transactions</h2>
       <form onSubmit={handleAdd}>
-        <input name="amount" value={formData.amount} onChange={handleChange} type="number" placeholder="Amount" required />
+        <input
+          name="amount"
+          value={formData.amount}
+          onChange={handleChange}
+          type="number"
+          placeholder="Amount"
+          required
+        />
         <select name="type" value={formData.type} onChange={handleChange}>
           <option value="expense">Expense</option>
           <option value="income">Income</option>
         </select>
-        <input name="category" value={formData.category} onChange={handleChange} placeholder="Category" required />
-        <input name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
+        <input
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+          placeholder="Category"
+          required
+        />
+        <input
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          placeholder="Description"
+        />
         <button type="submit">Add</button>
       </form>
 

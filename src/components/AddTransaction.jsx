@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { addTransaction } from '../api';
-import '../styles/AddTransaction.css';
+import React, { useState } from "react";
+import { addTransaction } from "../api";
+import "../styles/AddTransaction.css";
 
 const AddTransaction = ({ onAdd }) => {
   const [form, setForm] = useState({
-    amount: '',
-    type: 'expense',
-    category: '',
-    description: '',
+    amount: "",
+    type: "expense",
+    category: "",
+    description: "",
   });
 
   const handleChange = (e) => {
@@ -18,10 +18,10 @@ const AddTransaction = ({ onAdd }) => {
     e.preventDefault();
     try {
       await addTransaction(form);
-      setForm({ amount: '', type: 'expense', category: '', description: '' });
+      setForm({ amount: "", type: "expense", category: "", description: "" });
       onAdd(); // Refresh transaction list
     } catch (err) {
-      console.error('Failed to add transaction', err);
+      console.error("Failed to add transaction", err);
     }
   };
 
